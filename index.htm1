@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>معادن‌دان | MineScienceHub</title>
+<style>
+  body { font-family: Tahoma, sans-serif; margin: 0; padding: 0; direction: rtl; background: #f9f9f9; }
+  header { background: #004d40; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+  nav button { background: transparent; border: none; color: white; font-size: 14px; cursor: pointer; }
+  main { padding: 20px; max-width: 900px; margin: auto; }
+  h1 { color: #004d40; }
+  .lang-en { display: none; }
+  .article { background: white; padding: 15px; margin-bottom: 15px; border-radius: 8px; box-shadow: 0 0 5px #ccc; }
+  .pdf-link { color: #00796b; text-decoration: none; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<header>
+  <div><strong>معادن‌دان | MineScienceHub</strong></div>
+  <nav>
+    <button onclick="switchLang('fa')">فارسی</button>
+    <button onclick="switchLang('en')">English</button>
+  </nav>
+</header>
+
+<main>
+  <section id="intro">
+    <h1 class="lang-fa">به سایت معادن‌دان خوش آمدید</h1>
+    <h1 class="lang-en">Welcome to MineScienceHub</h1>
+    <p class="lang-fa">اینجا منابع رایگان مهندسی معدن را پیدا می‌کنید.</p>
+    <p class="lang-en">Find free mining engineering resources here.</p>
+  </section>
+
+  <section id="articles">
+    <h2 class="lang-fa">مقالات</h2>
+    <h2 class="lang-en">Articles</h2>
+
+    <article class="article">
+      <h3 class="lang-fa">نمونه مقاله فارسی</h3>
+      <h3 class="lang-en">Sample Article in English</h3>
+      <p class="lang-fa">این یک مقاله نمونه به زبان فارسی است.</p>
+      <p class="lang-en">This is a sample article in English.</p>
+      <a href="#" class="pdf-link lang-fa" download>دانلود PDF</a>
+      <a href="#" class="pdf-link lang-en" download>Download PDF</a>
+    </article>
+
+  </section>
+</main>
+
+<script>
+  function switchLang(lang) {
+    if(lang === 'fa') {
+      document.body.dir = 'rtl';
+      showElements('fa');
+      hideElements('en');
+    } else {
+      document.body.dir = 'ltr';
+      showElements('en');
+      hideElements('fa');
+    }
+  }
+  function showElements(lang) {
+    document.querySelectorAll('.lang-' + lang).forEach(el => el.style.display = '');
+  }
+  function hideElements(lang) {
+    document.querySelectorAll('.lang-' + lang).forEach(el => el.style.display = 'none');
+  }
+  // شروع با فارسی
+  switchLang('fa');
+</script>
+
+</body>
+</html>
